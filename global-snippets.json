@@ -1,0 +1,699 @@
+{
+     // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+     // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+     // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+     // used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+     // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+     // Placeholders with the same ids are connected.
+     // Example:
+     // "Print to console": {
+     // 	"scope": "javascript,typescript",
+     // 	"prefix": "log",
+     // 	"body": [
+     // 		"console.log('$1');",
+     // 		"$2"
+     // 	],
+     // 	"description": "Log output to console"
+     // }
+     //------------------------------------------------------------------------------------------------------
+     "Flutter Elevated Button": {
+          "prefix": "ElevatedButton",
+          "body": [
+               "ElevatedButton(",
+               "              child: Container(",
+               "              padding: EdgeInsets.symmetric(",
+               "              vertical: 10, horizontal: 40),",
+               "              child: Text(\"Button\"),",
+               "              ),",
+               "              onPressed: (){},",
+               "              style: ElevatedButton.styleFrom(",
+               "              primary: Colors.red,",
+               "              onPrimary: Colors.white,",
+               "              shape: RoundedRectangleBorder(",
+               "              borderRadius: BorderRadius.circular(32.0),",
+               "              ),",
+               "              ),",
+               "              ),"
+          ],
+          "description": "Flutter Elevated Button"
+     },
+     //----------------------------------------------------------------------------------------------------------
+     "Flutter Gradient box": {
+          "prefix": "GRADIENT-BOX",
+          "body": [
+               "Container(",
+               "                height: screenSize.height,",
+               "                width: screenSize.width,",
+               "                decoration: BoxDecoration(",
+               "                  gradient: new LinearGradient(",
+               "                      colors: [",
+               "                        Colors.black,",
+               "                        Colors.grey,",
+               "                      ],",
+               "                      stops: [",
+               "                        0.0,",
+               "                        1.0",
+               "                      ],",
+               "                      begin: FractionalOffset.topCenter,",
+               "                      end: FractionalOffset.bottomCenter,",
+               "                      tileMode: TileMode.repeated),",
+               "                ),",
+               "                child: Center(",
+               "                  child: Text(",
+               "                    \"Flutter Linear Gradient\",",
+               "                    style: TextStyle(",
+               "                      fontSize: 20,",
+               "                      fontWeight: FontWeight.bold,",
+               "                      color: Colors.white,",
+               "                    ),",
+               "                  ),",
+               "                ),",
+               "              ),"
+          ],
+          "description": "Flutter Gradient box"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Builder Function": {
+          "prefix": "MYBUILDER",
+          "body": [
+               "Builder(builder: (context){",
+               "  bool condition = true;",
+               "  if(condition==true){",
+               "  return Container();",
+               "    }else{",
+               "    return Container();",
+               "  } },),"
+          ],
+          "description": "Builder Function"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "My Icon Button": {
+          "prefix": "ICONBUTTON",
+          "body": [
+               "IconButton(",
+               " onPressed: () {},",
+               " icon: Icon(",
+               "  Icons.check_box_rounded,",
+               "  color: Colors.lightBlue.shade900,",
+               "  ),",
+               "  ),"
+          ],
+          "description": "My Icon Button"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Flutter Login Form": {
+          "prefix": "LOGIN-FORM-FLUTTER",
+          "body": [
+               "import 'package:flutter/material.dart';",
+               "",
+               "class FutterLoginForm extends StatefulWidget {",
+               "  const FutterLoginForm({",
+               "    Key? key,",
+               "  }) : super(key: key);",
+               "  @override",
+               "  _FutterLoginFormState createState() => _FutterLoginFormState();",
+               "}",
+               "",
+               "class _FutterLoginFormState extends State<FutterLoginForm> {",
+               "  TextEditingController usersNameController = TextEditingController();",
+               "  TextEditingController usersEmailController = TextEditingController();",
+               "  TextEditingController usersPasswordController = TextEditingController();",
+               "  @override",
+               "  Widget build(BuildContext context) {",
+               "    var screenSize = MediaQuery.of(context).size;",
+               "    return Scaffold(",
+               "      body: SingleChildScrollView(",
+               "        child: Container(",
+               "          height: screenSize.height,",
+               "          width: screenSize.width,",
+               "          decoration: BoxDecoration(",
+               "            image: DecorationImage(",
+               "                fit: BoxFit.cover,",
+               "                image: NetworkImage(",
+               "                    \"https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80\")),",
+               "          ),",
+               "          child: Container(",
+               "            margin: EdgeInsets.symmetric(horizontal: 300, vertical: 150),",
+               "            padding: const EdgeInsets.all(25),",
+               "            color: Colors.black54,",
+               "            child: Form(",
+               "              child: Column(",
+               "                children: [",
+               "                  Container(",
+               "                    alignment: Alignment.centerLeft,",
+               "                    child: Text(",
+               "                      \"Login Pannel\",",
+               "                      style: TextStyle(",
+               "                          fontSize: 24,",
+               "                          color: Colors.white,",
+               "                          fontWeight: FontWeight.w800),",
+               "                    ),",
+               "                  ),",
+               "                  SizedBox(height: 2),",
+               "                  Divider(),",
+               "                  SizedBox(height: 2),",
+               "                  TextFormFieldClass(",
+               "                    hintText: \"Username\",",
+               "                    controller: usersNameController,",
+               "                    placeHolder: 'Username',",
+               "                  ),",
+               "                  TextFormFieldClass(",
+               "                    hintText: \"Email\",",
+               "                    controller: usersEmailController,",
+               "                    placeHolder: 'Email',",
+               "                  ),",
+               "                  TextFormFieldClass(",
+               "                    hintText: \"Password\",",
+               "                    controller: usersPasswordController,",
+               "                    placeHolder: 'Password',",
+               "                  ),",
+               "                  SizedBox(",
+               "                    height: 20,",
+               "                  ),",
+               "                  Container(",
+               "                    child: Row(",
+               "                      mainAxisAlignment: MainAxisAlignment.spaceAround,",
+               "                      children: [",
+               "                        ElevatedButton(",
+               "                          child: Container(",
+               "                            padding: EdgeInsets.symmetric(",
+               "                                vertical: 10, horizontal: 40),",
+               "                            child: Text(\"RESET\"),",
+               "                          ),",
+               "                          onPressed: () {},",
+               "                          style: ElevatedButton.styleFrom(elevation: 20),",
+               "                        ),",
+               "                        ElevatedButton(",
+               "                          child: Container(",
+               "                            padding: EdgeInsets.symmetric(",
+               "                                vertical: 10, horizontal: 40),",
+               "                            child: Text(\"SUBMIT\"),",
+               "                          ),",
+               "                          onPressed: () {},",
+               "                          style: ElevatedButton.styleFrom(elevation: 20),",
+               "                        ),",
+               "                      ],",
+               "                    ),",
+               "                  )",
+               "                ],",
+               "              ),",
+               "            ),",
+               "          ),",
+               "        ),",
+               "      ),",
+               "    );",
+               "  }",
+               "}",
+               "",
+               "class TextFormFieldClass extends StatefulWidget {",
+               "  final String placeHolder;",
+               "  final String hintText;",
+               "  final Function(void)? onChange;",
+               "  final Function(void)? onSave;",
+               "  final FormFieldValidator<String>? validator;",
+               "  final TextEditingController controller;",
+               "",
+               "  const TextFormFieldClass({",
+               "    Key? key,",
+               "    required this.placeHolder,",
+               "    required this.hintText,",
+               "    required this.controller,",
+               "    this.onChange,",
+               "    this.onSave,",
+               "    this.validator,",
+               "  }) : super(key: key);",
+               "",
+               "  @override",
+               "  _TextFormFieldClassState createState() => _TextFormFieldClassState();",
+               "}",
+               "",
+               "class _TextFormFieldClassState extends State<TextFormFieldClass> {",
+               "  @override",
+               "  Widget build(BuildContext context) {",
+               "    return Container(",
+               "      margin: EdgeInsets.all(10),",
+               "      child: TextFormField(",
+               "        validator: widget.validator ?? (value) {},",
+               "        controller: widget.controller,",
+               "        autofocus: false,",
+               "        cursorColor: Colors.black,",
+               "        style: new TextStyle(",
+               "          fontSize: 22.0,",
+               "          color: Color(0xFFbdc6cf),",
+               "        ),",
+               "        onSaved: widget.onSave ?? (value) {},",
+               "        onChanged: widget.onChange ?? (value) {},",
+               "        decoration: new InputDecoration(",
+               "          filled: true,",
+               "          fillColor: Colors.white,",
+               "          hintText: widget.hintText,",
+               "          focusedBorder: OutlineInputBorder(",
+               "            borderSide: new BorderSide(color: Colors.grey, width: 2),",
+               "          ),",
+               "          enabledBorder: UnderlineInputBorder(",
+               "            borderSide: new BorderSide(color: Colors.grey, width: 2),",
+               "          ),",
+               "        ),",
+               "      ),",
+               "    );",
+               "  }",
+               "}",
+               ""
+          ],
+          "description": "Flutter Login Form"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Flutter Size box": {
+          "prefix": "SIZER",
+          "body": [
+               "SizedBox(height: 50),"
+          ],
+          "description": "Flutter Size box"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Flutter Snackbar": {
+          "prefix": "SHOW-SNACKBAR",
+          "body": [
+               "ScaffoldMessenger.of(context).showSnackBar(",
+               "        SnackBar(",
+               "            content: Container(",
+               "              height: 50,",
+               "              child: Center(",
+               "                child: Text(",
+               "                  'Login Successfully.',",
+               "                  style: TextStyle(",
+               "                    color: Colors.black,",
+               "                  ),",
+               "                ),",
+               "              ),",
+               "            ),",
+               "            duration: Duration(seconds: 5),",
+               "            backgroundColor: Colors.green.shade700),",
+               "      );"
+          ],
+          "description": "Flutter Snackbar"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Margin Left": {
+          "prefix": "ML",
+          "body": [
+               "margin: EdgeInsets.only(left: 10),"
+          ],
+          "description": "Margin Left"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Margin Right": {
+          "prefix": "MR",
+          "body": [
+               "margin: EdgeInsets.only(right: 10),"
+          ],
+          "description": "Margin Right"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Margin Top": {
+          "prefix": "MT",
+          "body": [
+               "margin: EdgeInsets.only(top: 10),"
+          ],
+          "description": "Margin Top"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Margin Bottom": {
+          "prefix": "MB",
+          "body": [
+               "margin: EdgeInsets.only(bottom: 10),"
+          ],
+          "description": "Margin Bottom"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Padding Top": {
+          "prefix": "PT",
+          "body": [
+               "padding: EdgeInsets.only(top: 10),"
+          ],
+          "description": "Padding Top"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Padding Bottom": {
+          "prefix": "PB",
+          "body": [
+               "padding: EdgeInsets.only(bottom: 10),"
+          ],
+          "description": "Padding Bottom"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Padding Left": {
+          "prefix": "PL",
+          "body": [
+               "padding: EdgeInsets.only(left: 10),"
+          ],
+          "description": "Margin Left"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Padding Right": {
+          "prefix": "PR",
+          "body": [
+               "padding: EdgeInsets.only(right: 10),"
+          ],
+          "description": "Padding Right"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Screen Size": {
+          "prefix": "SIZE",
+          "body": [
+               "var screenSize = MediaQuery.of(context).size;"
+          ],
+          "description": "Screen Size"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Page Navigation": {
+          "prefix": "PAGE-NAVIGATION",
+          "body": [
+               "  pageNavigation({required Widget childWidget}) {",
+               "    Navigator.push(",
+               "      context,",
+               "      PageTransition(",
+               "        child: childWidget,",
+               "        type: PageTransitionType.rightToLeft,",
+               "        duration: Duration(milliseconds: 300),",
+               "      ),",
+               "    );",
+               "  }"
+          ],
+          "description": "Page Navigation"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Go to back Navigation": {
+          "prefix": "POP",
+          "body": [
+               " Navigator.of(context).pop();"
+          ],
+          "description": "Go to back Navigation"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Future Delay Function": {
+          "prefix": "DELAY",
+          "body": [
+               "Future.delayed(Duration(seconds: 3), () {",
+               "setState(() {",
+               " // activeButton = false;",
+               "});",
+               "});"
+          ],
+          "description": "Future Delay Function"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Html Bootstrap Container Section": {
+          "prefix": "MYCONTAINER",
+          "body": [
+               "<div class=\"container\">",
+               "    <div class=\"row\">",
+               "        <div class=\"col-md-12\">",
+               "            <!-- ------------------------------- -->",
+               "",
+               "",
+               "            <!-- ------------------------------- -->",
+               "        </div>",
+               "    </div>",
+               "</div>"
+          ],
+          "description": "Html Bootstrap Container Section"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Html Bootstrap Tooltip": {
+          "prefix": "MYTOOLTIP",
+          "body": [
+               " <div class=\"hoverTooltip\">",
+               "           ",
+               " <span class=\"tooltiptextClass positionClass\">Side-Menu</span>"
+          ],
+          "description": "Html Bootstrap Tooltip"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Seperate Console Print": {
+          "prefix": "CLL",
+          "body": [
+               "console.log(\"//-----------------------------------------------------------------------------//\");",
+               "console.log($0);",
+               "console.log(\"//-----------------------------------------------------------------------------//\");"
+          ],
+          "description": "Seperate Console Print"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Flutter Hexa Decimal Color": {
+          "prefix": "HEX-COLOR",
+          "body": [
+               "Color(int.parse(\"0xff\" + \"CAE8F9\"))"
+          ],
+          "description": "Flutter Hexa Decimal Color"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "This is multi line comment for write multiple line comment": {
+          "prefix": "SC  SUPER-COMMENT",
+          "body": [
+               "//--------------------------------------------------------------------------------------------------",
+               "/**",
+               " * This function is written to ",
+               " */"
+          ],
+          "description": "This is multi line comment for write multiple line comment"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Bootstrap Responsive Column": {
+          "prefix": "RES-COL",
+          "body": [
+               "col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3"
+          ],
+          "description": "Bootstrap Responsive Column"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Bootstrap Container Section": {
+          "prefix": "BTS-CONTAINER",
+          "body": [
+               "<div class=\"container bg-light\">",
+               "    <div class=\"row justify-content-start\">",
+               "        <div class=\"col-md-12\">",
+               "            <b class=\"my-2\">Bootstrap Section</b>",
+               "            <p class=\"\">Maybe my question was not clear enough.. .</p>",
+               "        </div>",
+               "    </div>",
+               "</div>"
+          ],
+          "description": "Bootstrap Container Section"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Bootstrap Form": {
+          "prefix": "BTS-FORM",
+          "body": [
+               "<div class=\"container\">",
+               "    <div class=\"row justify-content-center\">",
+               "        <div class=\"col-md-8 bg-light py-1\">",
+               "            <div class=\"row justify-content-start py-1 my-1\">",
+               "                <div class=\"col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12\">",
+               "                    <div class=\"form-head\" style=\"text-align: left;\">",
+               "                        <b>Form Title</b>",
+               "                        <p></p>",
+               "                    </div>",
+               "                </div>",
+               "                <div class=\"col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12\">",
+               "                    <div class=\"form-group\">",
+               "                        <input type=\"text\" class=\"form-control\"",
+               "                            placeholder=\"Enter field placeholder\" name=\"inputName\" id=\"inputId\">",
+               "                    </div>",
+               "                </div>",
+               "                <div class=\"col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12\">",
+               "                    <div class=\"form-group\">",
+               "                        <input type=\"text\" class=\"form-control\"",
+               "                            placeholder=\"Enter field placeholder\" name=\"inputName\" id=\"inputId\">",
+               "                    </div>",
+               "                </div>",
+               "                <div class=\"col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12\">",
+               "                    <div class=\"form-group\">",
+               "                        <input type=\"text\" class=\"form-control\"",
+               "                            placeholder=\"Enter field placeholder\" name=\"inputName\" id=\"inputId\">",
+               "                    </div>",
+               "                </div>",
+               "                <div class=\"col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12\">",
+               "                    <div class=\"form-group\">",
+               "                        <input type=\"text\" class=\"form-control\"",
+               "                            placeholder=\"Enter field placeholder\" name=\"inputName\" id=\"inputId\">",
+               "                    </div>",
+               "                </div>",
+               "                <div",
+               "                    class=\"col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-end\">",
+               "                    <button class=\"btn btn-outline-primary btn-md px-3 ml-1\">Cancel</button>",
+               "                    <button class=\"btn btn-outline-primary btn-md px-3 ml-1\">Save</button>",
+               "                </div>",
+               "            </div>",
+               "        </div>",
+               "    </div>",
+               "</div>"
+          ],
+          "description": "Bootstrap Form"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Java Print Method": {
+          "prefix": "SOUT",
+          "body": [
+               "System.out.println(\"  \");"
+          ],
+          "description": "Java Print Method"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Prettier Ignore Comment": {
+          "prefix": "PIGNR",
+          "body": [
+               "// prettier-ignore"
+          ],
+          "description": "Prettier Ignore Comment"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Angular Container": {
+          "prefix": "NG-CONTAINER",
+          "body": [
+               "<ng-container>",
+               "            ",
+               "</ng-container>"
+          ],
+          "description": "Angular Container"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Bootstrap Container Row Column": {
+          "prefix": "BTS-BLOCK",
+          "body": [
+               "<div class=\"container\">",
+               "     <div class=\"row\">",
+               "          <div class=\"col-md-12\">",
+               "               BootstrapContainer",
+               "          </div>",
+               "     </div>",
+               "</div>"
+          ],
+          "description": "Bootstrap Container Row Column"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Angular container with for loop": {
+          "prefix": "NGF",
+          "body": [
+               "<ng-container *ngFor=\"let element of []; index as elementIndex\">",
+               "    <div class=\"show-element\">",
+               "        <p>{{ element }}</p>",
+               "    </div>",
+               "</ng-container>"
+          ],
+          "description": "Angular container with for loop"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Angular Interpolation": {
+          "prefix": "III",
+          "body": [
+               "{{element}}"
+          ],
+          "description": "Angular Interpolation"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Angular container with if condition": {
+          "prefix": "NGI",
+          "body": [
+               "<ng-container *ngIf=\"true\">",
+               "   ",
+               "</ng-container>"
+          ],
+          "description": "Angular container with if condition"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Angular container with if ternary operator": {
+          "prefix": "NGT",
+          "body": [
+               "<ng-container *ngIf=\" true ? 'true' : 'false' \">",
+               "   ",
+               "</ng-container>"
+          ],
+          "description": "Angular container with if ternary operator"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Html Prettier-ignore": {
+          "prefix": "PIGH",
+          "body": [
+               "<!-- prettier-ignore -->"
+          ],
+          "description": "Html Prettier-ignore"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Long Line": {
+          "prefix": "LLL",
+          "body": [
+               "//----------------------------------------------------------------------------------------------",
+               ""
+          ],
+          "description": "Long Line"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "CSS Media Query": {
+          "prefix": "CSSMQ",
+          "body": [
+               "@media only screen and (max-width : 1200px) {",
+               "    .yourclassname{",
+               "     font-size: 12px;",
+               "    }",
+               "}",
+               "@media only screen and (max-width : 992px) {",
+               "    .yourclassname{",
+               "     font-size: 12px;",
+               "    }",
+               "}",
+               "@media only screen and (max-width : 768px) {",
+               "    .yourclassname{",
+               "     font-size: 12px;",
+               "    }",
+               "}",
+               "@media only screen and (max-width : 600px) {",
+               "    .yourclassname{",
+               "     font-size: 12px;",
+               "    }",
+               "}",
+               "@media only screen and (max-width : 480px) {",
+               "    .yourclassname{",
+               "     font-size: 12px;",
+               "    }",
+               "}"
+          ],
+          "description": "CSS Media Query"
+     },
+     //------------------------------------------------------------------------------------------------------
+     "Java Print Data": {
+          "prefix": "SOP",
+          "body": [
+               "System.out.println(\"//-----------------------------------------------------------------------\");",
+               "System.out.println($0);",
+               "System.out.println(\"//-----------------------------------------------------------------------\");"
+          ],
+          "description": "Java Print Data"
+     }
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+     //------------------------------------------------------------------------------------------------------
+}
